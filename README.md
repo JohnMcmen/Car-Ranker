@@ -40,6 +40,8 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
+![kBdslKB](https://github.com/JohnMcmen/Car-Ranker/assets/98662843/79cd0c59-c053-4183-9615-924cb7e286cc)
+
 
 Gif made with ScreenToGif
 
