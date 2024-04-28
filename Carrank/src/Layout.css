@@ -1,0 +1,80 @@
+/* Complete Navigation Bar Styles */
+
+.navbar {
+  width: 80%; /* Set the width of the navbar to 80% of the screen */
+  margin: 0 auto; /* Center the navbar */
+  background-color: #222020; /* Modern dark background */
+  color: #ffffff;
+  padding: 10px 20px;
+  overflow-x: auto; /* Enables horizontal scrolling */
+  white-space: nowrap; /* Ensures the nav items stay in one line */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Soft shadow for depth */
+  position: relative; /* Allows absolute positioning of children */
+}
+
+/* Hide scrollbar for Webkit browsers */
+.navbar::-webkit-scrollbar {
+  display: none;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: 600; /* Slightly less bold than before for a sleeker look */
+  color: #969696; /* Light blue color for a fresh look */
+  margin-right: 20px; /* Ensures some space after the logo */
+  flex-shrink: 0; /* Prevents the logo from shrinking */
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block; /* Aligns with the scrollable feature */
+}
+
+.navbar li {
+  display: inline-block; /* List items inline for horizontal layout */
+  margin-right: 20px; /* Space between nav items */
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: color 0.3s, background-color 0.3s; /* Smooth transitions for hover */
+}
+
+.navbar li a:hover, .navbar li a:focus {
+  color: #282c34; /* Dark text on hover for contrast */
+  background-color: #969696; /* Light blue background on hover */
+}
+
+/* Positioned search container */
+.navbar .search-container {
+  position: absolute; /* Absolute positioning within the navbar */
+  right: 20px; /* Aligns the search-container to the right */
+  top: 10px; /* Aligns vertically */
+}
+
+.navbar input[type="text"] {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #969696; /* Light blue border for the input */
+  outline: none; /* Removes the default focus outline */
+}
+
+.navbar button {
+  padding: 8px 16px;
+  margin-left: 10px;
+  border: none;
+  background-color: #969696; /* Light blue background */
+  color: #282c34; /* Dark text color */
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none; /* Removes the default focus outline */
+}
+
+.navbar button:hover, .navbar button:focus {
+  background-color: #ffffff; /* A darker shade of blue for hover */
+}
