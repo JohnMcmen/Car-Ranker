@@ -1,80 +1,103 @@
-/* Complete Navigation Bar Styles */
+/* Reset default margin and padding */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif; /* Modern looking font */
+}
 
+/* Ensure full height and no overflow */
+html, body, #root {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Layout styles */
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Top navigation bar styles */
 .navbar {
-  width: 80%; /* Set the width of the navbar to 80% of the screen */
-  margin: 0 auto; /* Center the navbar */
-  background-color: #222020; /* Modern dark background */
-  color: #ffffff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: #222;
   padding: 10px 20px;
-  overflow-x: auto; /* Enables horizontal scrolling */
-  white-space: nowrap; /* Ensures the nav items stay in one line */
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Soft shadow for depth */
-  position: relative; /* Allows absolute positioning of children */
-}
-
-/* Hide scrollbar for Webkit browsers */
-.navbar::-webkit-scrollbar {
-  display: none;
-}
-
-.navbar .logo {
-  font-size: 24px;
-  font-weight: 600; /* Slightly less bold than before for a sleeker look */
-  color: #969696; /* Light blue color for a fresh look */
-  margin-right: 20px; /* Ensures some space after the logo */
-  flex-shrink: 0; /* Prevents the logo from shrinking */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex; /* Add display flex */
+  justify-content: space-between; 
 }
 
 .navbar ul {
-  list-style: none;
-  padding: 0;
+  list-style: none; /* Remove bullet points */
+  display: flex;
+  align-items: center;
   margin: 0;
-  display: inline-block; /* Aligns with the scrollable feature */
+  padding: 0;
 }
 
 .navbar li {
-  display: inline-block; /* List items inline for horizontal layout */
-  margin-right: 20px; /* Space between nav items */
+  margin-right: 20px;
+  list-style: none; /* Remove bullet points */
 }
 
-.navbar li a {
+.navbar a {
   text-decoration: none;
-  color: #ffffff;
-  padding: 8px 16px;
-  border-radius: 4px;
-  transition: color 0.3s, background-color 0.3s; /* Smooth transitions for hover */
+  color: #fff;
+  font-weight: bold;
 }
 
-.navbar li a:hover, .navbar li a:focus {
-  color: #282c34; /* Dark text on hover for contrast */
-  background-color: #969696; /* Light blue background on hover */
+.navbar a:hover {
+  text-decoration: underline;
 }
 
-/* Positioned search container */
-.navbar .search-container {
-  position: absolute; /* Absolute positioning within the navbar */
-  right: 20px; /* Aligns the search-container to the right */
-  top: 10px; /* Aligns vertically */
+/* Content styles */
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+  margin-top: 60px; /* Adjusted margin top */
+  max-width: 1000px; /* Adjusted max width */
 }
 
-.navbar input[type="text"] {
+.navbar .title {
+  color: #fff;
+  font-size: 24px;
+  margin: 0;
+}
+
+
+.navbar form {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Pushes the form to the right */
+}
+
+.navbar input,
+.navbar button {
+  margin-left: 10px; /* Added margin between input and button */
+}
+
+.navbar input {
+  flex-grow: 1;
   padding: 8px;
-  border-radius: 4px;
-  border: 1px solid #969696; /* Light blue border for the input */
-  outline: none; /* Removes the default focus outline */
+  border-radius: 5px;
+  border: none;
+  background-color: #f3f3f3; /* Light gray background */
 }
 
 .navbar button {
-  padding: 8px 16px;
-  margin-left: 10px;
+  padding: 8px 15px;
   border: none;
-  background-color: #969696; /* Light blue background */
-  color: #282c34; /* Dark text color */
-  border-radius: 4px;
+  border-radius: 5px;
+  background-color: #969696; /* New color */
+  color: #fff;
   cursor: pointer;
-  outline: none; /* Removes the default focus outline */
 }
 
-.navbar button:hover, .navbar button:focus {
-  background-color: #ffffff; /* A darker shade of blue for hover */
+.navbar button:hover {
+  background-color: #777; /* Darker color on hover */
 }
